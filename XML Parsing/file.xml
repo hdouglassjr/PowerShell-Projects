@@ -1,0 +1,15 @@
+<!-- file.xml -->
+<people>
+    <person id="101">
+        <name>Jon Lajoie</name>
+        <age>22</age>
+    </person>
+    <person id="102">
+        <name>Lord Gaben</name>
+        <age>65</age>
+    </person>
+    <person id="103">
+        <name>Gordon Freeman</name>
+        <age>29</age>
+    </person>
+</people>
