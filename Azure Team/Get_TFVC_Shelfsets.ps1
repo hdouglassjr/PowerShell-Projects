@@ -1,6 +1,6 @@
 $organization = "harryteck2"
 $project = "MyFirstProject"
-$pat = "5sd9PEhxM3kIMBAwaFSAYvDJ3YPy3Fwgy5hK23imsqxuW3w85IUMJQQJ99BCACAAAAAy6nhCAAASAZDO3uAf"
+$pat = "<your personal access token here>"
 $base64AuthInfo = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(":$($pat)"))
 $resource = "shelvesets"
 
