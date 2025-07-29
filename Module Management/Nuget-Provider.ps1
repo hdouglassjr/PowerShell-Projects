@@ -14,3 +14,9 @@ if ($PSVersionTable.PSVersion.Major -eq 5 -and $PSVersionTable.PSVersion.Minor -
     Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 }
 Get-module -name nuget -ListAvailable | Select-Object -Property Name, Version, Path, Description | Format-Table -AutoSize
+
+# Setting the PSGallery repository to trusted
+if (-not (Get-PSRepository -Name PSGallery -ErrorAction SilentlyContinue)) {
+    Register-PSRepository -Name PSGallery -SourceLocation 'https://www.powershellgallery.com/api/v2/' -InstallationPolicy Trusted
+    Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+}
