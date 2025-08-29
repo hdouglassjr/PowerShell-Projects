@@ -20,7 +20,7 @@ $headers = @{
 
 Invoke-RestMethod -H $headers "https://vssps.dev.azure.com/{organization}/_apis/Tokens/Pats?api-version=$azureDevOpsApiVersion"
 ```
-##### Get Changesets
+#### Get Changesets
 ```powershell
 $organization = "harryteck2"
 $project = "MyFirstProject"
@@ -46,7 +46,7 @@ $response.value | ForEach-Object {
 
 ```
 
-##### Get Shelvesets
+#### Get Shelvesets
 ```powershell
 $organization = "harryteck2"
 $project = "MyFirstProject"
