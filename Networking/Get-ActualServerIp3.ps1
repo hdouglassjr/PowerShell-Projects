@@ -1,3 +1,9 @@
+#Usage 1:
+#  .\Get-ActualServerIp.ps1 -ServerName app01  
+#  .\Get-ActualServerIp.ps1 -ServerName app01.corp.company.com -InternalDnsServer 10.10.20.15
+#  .\Get-ActualServerIp.ps1 -ServerName app01.corp.company.com -InternalDnsServer 10.10.20.15 -ShowOnlyFinalIPs
+
+
 [CmdletBinding()]
 param(
     [Parameter(Mandatory)]
