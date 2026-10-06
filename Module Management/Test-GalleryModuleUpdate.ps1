@@ -33,4 +33,8 @@ function Test-GalleryModuleUpdate
 }
 
 Get-InstalledModule | Where-Object Repository -eq PSGallery | 
-  Test-GalleryModuleUpdate -NeedUpdateOnly
+  Test-GalleryModuleUpdate -NeedUpdateOnly 
+#   |
+#   ForEach-Object {
+#     Update-Module -Name $_.ModuleName
+#   }
