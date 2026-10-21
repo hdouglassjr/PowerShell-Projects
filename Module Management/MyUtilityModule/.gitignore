@@ -1,0 +1,29 @@
+## PowerShell
+*.psd1
+*.psm1
+*.ps1
+*.ps1xml
+*.pssc
+*.cdxml
+obj/
+bin/
+*.nupkg
+*.psm1.bak
+*.psd1.bak
+
+## IDE
+.vscode/
+.idea/
+*.suo
+*.user
+
+## OS
+.DS_Store
+Thumbs.db
+
+## Pester
+coverage.xml
+coverage.cobertura.xml
+
+## Modules
+\C:\Users\hdoug/OneDrive/
