@@ -1,4 +1,20 @@
+# View all four profile path variables
+$PROFILE.AllUsersAllHosts        # All users, all hosts
+$PROFILE.AllUsersCurrentHost     # All users, current host (ISE or pwsh)
+$PROFILE.CurrentUserAllHosts     # Current user, all hosts
+$PROFILE.CurrentUser             # Current user, current host (most specific)
+
+# Quick reference — show all paths
+$PROFILE | Select-Object *
+# or
 $PROFILE | Format-List -Force
+
+# You can also verify which PowerShell host you are running:
+$Host.Name
+# Example Outputs:
+# In Visual Studio PCM:
+# PM> $Host.Name
+# Package Manager Host
 
 <#
     List all PowerShell profile script settings. You will see different values for 
