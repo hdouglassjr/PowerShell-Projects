@@ -1,4 +1,4 @@
-$moduleName = 'Plaster'
+$moduleName = 'Pester'
 $installed = Get-InstalledModule -Name $moduleName
 $online = Find-Module -Name $moduleName
 
@@ -8,7 +8,9 @@ $online = Find-Module -Name $moduleName
     LatestOnline = $online.Version
     NeedsUpdate = $online.Version -gt $installed.Version
 }
+$needsUpdate = $online.Version -gt $installed.Version
 
-Get-InstalledModule |
-    Where-Object Repository -eq 'PSGallery' |
-    Test-GalleryModuleUpdate -NeedUpdateOnly
+if($installed -and $needsUpdate){
+    Test-GalleryModuleUpdate $moduleName -NeedUpdateOnly
+}
+   
