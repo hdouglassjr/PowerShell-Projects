@@ -28,6 +28,6 @@ $profile | Select-Object *host* | Format-List
 ($profile.psobject.properties).where({$_.name -ne 'length'}).where({Test-Path $_.value }) | Select-Object Name,Value
 
 # Get details about all external scripts in your %PATH%.
-gcm -commandtype externalscript | Get-Item | 
-Select-Object Directory,Name,Length,CreationTime,LastwriteTime,
+Get-Command -CommandType ExternalScript | Get-Item | 
+Select-Object Directory,Name,Length,CreationTime,LastWriteTime,
 @{name="Signature";Expression={(Get-AuthenticodeSignature $_.fullname).Status }}
